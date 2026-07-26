@@ -6,7 +6,9 @@
 
 namespace Erikwang2013\IndustrialProtocols\HartIp\Exception;
 
-class HartIpException extends \RuntimeException
+use Erikwang2013\IndustrialProtocols\Exception\ProtocolException;
+
+class HartIpException extends ProtocolException
 {
     public static function invalidVersion(int $version): self
     {

@@ -12,7 +12,7 @@ use Erikwang2013\IndustrialProtocols\Protocol\ProtocolInterface;
 class HartIpProtocol implements ProtocolInterface
 {
     public function getName(): string { return 'hart-ip'; }
-    public function getVersion(): string { return '1.0.0'; }
+    public function getVersion(): string { return '1.1.1'; }
     public function getSupportedVariants(): array { return ['tcp', 'udp']; }
     public function getDefaultPort(): int { return 5094; }
 

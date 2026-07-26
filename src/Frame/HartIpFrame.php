@@ -12,7 +12,7 @@ use Erikwang2013\IndustrialProtocols\Protocol\FrameInterface;
 /**
  * HART-IP frame over TCP/UDP (port 5094).
  *
- * HART-IP header (8 bytes):
+ * HART-IP header (9 bytes):
  *   Version     (1 byte)  = 0x01
  *   MessageType (1 byte)  = 0x00 (request), 0x01 (response), 0x02 (publish), 0x03 (error)
  *   Status      (1 byte)  = 0x00 for request, error code for error type

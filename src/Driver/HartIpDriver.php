@@ -82,17 +82,17 @@ class HartIpDriver implements DriverInterface
 
         fwrite($this->socket, $wireFrame->toBytes());
 
-        // Read response header (8 bytes)
+        // Read response header (9 bytes)
         $header = '';
-        while (strlen($header) < 8) {
-            $chunk = fread($this->socket, 8 - strlen($header));
+        while (strlen($header) < 9) {
+            $chunk = fread($this->socket, 9 - strlen($header));
             if ($chunk === false || $chunk === '') {
                 break;
             }
             $header .= $chunk;
         }
 
-        if (strlen($header) < 8) {
+        if (strlen($header) < 9) {
             throw new \RuntimeException('HART-IP: incomplete response header');
         }
 
